@@ -1,16 +1,14 @@
-nilai = int(input("Masukkan nilai: "))
+def ganjil_genap():
+    while True:
+        nilai = int(input("masukkan nilai (0 untuk kembali): "))
 
-if nilai % 2 == 0:
-    print("Nilai", nilai, "adalah bilangan genap")
-else:
-    print("Nilai", nilai, "adalah bilangan ganjil")
-while True:
-    inputan = input("Masukkan bilangan (tekan 'q' untuk keluar): ") 
+        if nilai == 0:
+            break
 
-    if inputan.lower() == "q":
-        print("Program dihentikan.")
-        break
-
+        if nilai % 2 == 0:
+            print("nilai", nilai, "adalah bilangan genap")
+        else:
+            print("nilai", nilai, "adalah bilangan ganjli")
     angka = int(inputan)
 
     if angka % 2 == 0:
