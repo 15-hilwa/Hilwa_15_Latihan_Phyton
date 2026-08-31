@@ -9,9 +9,25 @@ def ganjil_genap():
             print("nilai", nilai, "adalah bilangan genap")
         else:
             print("nilai", nilai, "adalah bilangan ganjli")
-    angka = int(inputan)
 
-    if angka % 2 == 0:
-        print(angka, "adalah bilangan genap")
-    else:
-        print(angka, "adalah bilangan ganjil")
+def bilangan_prima():
+    while True:
+        angka = int(input("masukkan angka (0 untuk kembali): "))
+
+        if angka == 0:
+            break 
+
+        if angka < 2:
+            print(angka, "bukanlah bilangan prima")
+        else:
+            prima = True
+
+            for i in range(2, angka):
+                if angka % i == 0:
+                    prima = False
+                    break
+
+            if prima:
+                print(angka, "adalah bilangan prima")
+            else:
+                print(angka, "bukanlah bilangan prima")
