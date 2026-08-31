@@ -26,8 +26,33 @@ def bilangan_prima():
                 if angka % i == 0:
                     prima = False
                     break
-
+                    
             if prima:
                 print(angka, "adalah bilangan prima")
             else:
                 print(angka, "bukanlah bilangan prima")
+
+
+def menu():
+    while True:
+        print("==  MENU ==")
+        print("1. Ganjil - Genap")
+        print("2. Bilangan Prima")
+        print("3. Keluar")
+
+        pilihan = input("Pilih Menu: ")
+
+        if pilihan == "1":
+            ganjil_genap()
+
+        elif pilihan == "2":
+            bilangan_prima()
+
+        elif pilihan == "3":
+            print("Program Selesai.")
+            break
+
+        else:
+            print("Pilihan tidak tersedia.")
+
+menu()
